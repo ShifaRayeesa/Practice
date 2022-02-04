@@ -1,0 +1,15 @@
+import java.util.*;
+public class SumNatural {
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        int i,n,sum=0;
+        System.out.println("Enter the no. of natural numbers");
+        n=sc.nextInt();
+        for(i=1;i<=n;i++)
+        {
+            sum=sum+i;
+        }
+        System.out.print(sum);
+    }
+}
