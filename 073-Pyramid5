@@ -1,0 +1,27 @@
+import java.util.*;
+public class Pyramid5 {
+    public static void main(String[] args)
+    {
+        int i,j,k,n,cnt;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        cnt=n;
+        for(i=1;i<=n;i++)
+        {
+            for(j=0;j<2*(n-i);j++)
+            {
+                System.out.print(" ");
+            }
+            for(j=1;j<=i;j++)
+            {
+                System.out.print(n-i+j +" ");
+            }
+            for(k=n-1;k>=cnt;k--)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
+            cnt--;
+        }
+    }
+}
