@@ -1,0 +1,16 @@
+import java.util.*;
+public class MultiplicationTable {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,table,multi,prod;
+        System.out.println("Enter the number and no. of multiples:");
+        table=sc.nextInt();
+        multi= sc.nextInt();
+        for(i=1;i<=multi;i++)
+        {
+            prod=table*i;
+            System.out.println(table+" x "+i+" = "+prod);
+        }
+    }
+}
