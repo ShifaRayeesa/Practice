@@ -1,0 +1,20 @@
+import java.util.*;
+public class Fibonacci {
+    public static void main(String[] args)
+    {
+        int i,fst,sec,thr,n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the no. of values to be printed:");
+        n=sc.nextInt();
+        fst=0;
+        sec=1;
+        System.out.print(fst+" "+sec+" ");
+        for(i=3;i<=n;i++)
+        {
+            thr=fst+sec;
+            fst=sec;
+            sec=thr;
+            System.out.print(thr+" ");
+        }
+    }
+}
