@@ -1,0 +1,16 @@
+import java.util.*;
+public class PowerRec {
+    public static int findPower(int n,int p)
+    {
+        if(p==0) return 1;
+        else
+           return n*findPower(n,p-1);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int pow= sc.nextInt();
+        System.out.println(findPower(num,pow));
+    }
+}
