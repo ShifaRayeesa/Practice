@@ -1,0 +1,56 @@
+import java.util.*;
+public class BinOct {
+    public static void main(String[] args)
+    {
+        int i=0;
+        Scanner in=new Scanner(System.in);
+        long bin=in.nextLong();
+        long dec=0,oct=0,rem;
+        while(bin!=0)
+        {
+            rem=bin%10;
+            dec=dec+rem*((int)Math.pow(2,i++));
+            bin/=10;
+        }
+        System.out.println(dec);
+        int pow=1;
+        while(dec!=0)
+        {
+            rem=dec%8;
+            oct=oct+rem*pow;
+            dec/=8;
+            pow*=10;
+        }
+        System.out.println(oct);
+
+    }
+}
+
+
+import java.util.*;
+public class OctToBin {
+    public static void main(String[] args)
+    {
+        int i=0;
+        Scanner in=new Scanner(System.in);
+        long oct=in.nextLong();
+        long dec=0,rem,bin=0;
+        while(oct!=0)
+        {
+            rem=oct%10;
+            dec=dec+rem*((int)Math.pow(8,i));
+            oct/=10;
+            i++;
+        }
+        System.out.println(dec);
+        int pow=1;
+        while(dec!=0)
+        {
+            rem=dec%2;
+            bin=rem*pow+bin;
+            pow*=10;
+            dec/=2;
+        }
+        System.out.println(bin);
+    }
+}
