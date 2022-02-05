@@ -13,7 +13,7 @@ public class SumNatRec {
         System.out.println("Enter a num:");
         Scanner sc=new Scanner(System.in);
         n= sc.nextInt();
-        int sum=findSum(n);
-        System.out.println(sum);
+        System.out.println(findSum(n));
     }
 }
+
