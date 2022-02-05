@@ -1,0 +1,17 @@
+import  java.util.*;
+public class FactRec {
+    public static int findFact(int n)
+    {
+        if(n==0) return 1;//do not use return 0 as it is returned to findFact(n-1) as 0*any_num=0
+        else return n*findFact(n-1);
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a num");
+        int num=sc.nextInt();
+        int fact=findFact(num);
+        System.out.println(fact);
+    }
+}
