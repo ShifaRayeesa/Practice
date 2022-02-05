@@ -1,0 +1,30 @@
+import java.util.*;
+public class KmToMile {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        double km=sc.nextDouble();
+        System.out.println(km*0.621371+" miles");
+    }
+}
+
+import java.util.*;
+public class CelsiusFahren {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        double celsius=sc.nextDouble();
+        System.out.println(celsius*1.8+32+" F");
+    }
+}
+
+
+import java.util.*;
+public class SqftToAcre {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        double sqft=sc.nextDouble();
+        System.out.println(sqft*2.296*Math.pow(10,-5)+" Acres");
+    }
+}
