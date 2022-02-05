@@ -3,19 +3,23 @@ public class PrimeUser {
     public static void checkPrime(int n)
     {
         int i;
-        for(i=2;i<n/2;i++)
+        if(n==1)
         {
-            if(n%i==0)
+            System.out.println("1 is neither prime nor composite");
+            return;
+        }
+        else
+        {
+            for(i=2;i<n/2;i++)
             {
-                System.out.println(n+" is not a Prime Number");
-                return;
+                if(n%i==0)
+                {
+                    System.out.println(n+" is not a Prime Number");
+                    return;
+                }
             }
         }
-        if(n==1)
-            System.out.println("1 is neither prime nor composite");
-        else
-            System.out.println(n+" is a Prime Number");
-
+        System.out.println(n+" is a Prime Number");
     }
     public static void main(String[] args)
     {
