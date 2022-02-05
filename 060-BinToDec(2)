@@ -1,0 +1,36 @@
+public class BinDec {
+    public static void main(String[] args)
+    {
+        int i=0;
+        Scanner in=new Scanner(System.in);
+        long bin=in.nextLong();
+        long dec=0,rem;
+        while(bin!=0)
+        {
+            rem=bin%10;
+            dec=dec+rem*((int)Math.pow(2,i++));
+            bin/=10;
+        }
+        System.out.println(dec);
+    }
+}
+
+
+import java.util.*;
+public class DecBin {
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        long dec=in.nextLong();
+        long bin=0,rem;
+        int pow=1;
+        while(dec!=0)
+        {
+            rem=dec%2;
+            bin=rem*pow+bin;
+            pow*=10;
+            dec/=2;
+        }
+        System.out.println(bin);
+    }
+}
