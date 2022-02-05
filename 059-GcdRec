@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class GcdRec {
+    public static int findGcd(int n1,int n2,int lim)
+    {
+        if(n1%lim==0 && n2%lim==0) return lim;
+        else return findGcd(n1,n2,lim-1);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the numbers");
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        System.out.println(findGcd(n1,n2,n2/2));
+    }
+}
