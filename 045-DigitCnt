@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class DigitCnt {
+    public static void main(String[] args)
+    {
+        int dig=0,org;
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        org=num;
+        while(num!=0)
+        {
+            dig++;
+            num=num/10;
+        }
+        System.out.println("The number of digits in "+org+" is "+dig);
+    }
+}
