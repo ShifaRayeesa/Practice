@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Power {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int pow= sc.nextInt();
+        int prod=1,oPow=pow;
+       
+        while(pow!=0)
+        {
+            prod=prod*num;
+            pow--;
+        }
+        System.out.println(num+" to the power of "+oPow+" is "+prod);
+       
+        // System.out.println(num+" to the power of "+pow+" is "+Math.pow(num,pow));
+    }
+}
+
