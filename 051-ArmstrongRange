@@ -1,0 +1,31 @@
+import java.util.*;
+public class ArmstrongRange{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1, n2, sum , dig, org, rem;
+        System.out.println("Enter the numbers");
+        n1 = sc.nextInt();
+        n2 = sc.nextInt();
+        while (n1 <= n2)
+        {
+            org=n1;
+            dig=0;
+            sum=0;
+            while(n1!=0)
+            {
+                n1=n1/10;
+                dig++;
+            }
+            n1=org;
+            while(n1!=0)
+            {
+                rem=n1%10;
+                sum=sum+(int)Math.pow(rem,dig);
+                n1=n1/10;
+            }
+            if(org==sum)
+                System.out.print(org+" ");
+            n1=++org;
+        }
+    }
+}
