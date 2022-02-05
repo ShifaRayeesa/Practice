@@ -1,0 +1,37 @@
+import java.util.*;
+public class OctToDec {
+    public static void main(String[] args)
+    {
+        int i=0;
+        Scanner in=new Scanner(System.in);
+        long oct=in.nextLong();
+        long dec=0,rem;
+        while(oct!=0)
+        {
+            rem=oct%10;
+            dec=dec+rem*((int)Math.pow(8,i));
+            oct/=10;
+            i++;
+        }
+        System.out.println(dec);
+    }
+}
+
+import java.util.*;
+public class DecOct {
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        long dec=in.nextLong();
+        long rem,oct=0;
+        int pow=1;
+        while(dec!=0)
+        {
+            rem=dec%8;
+            oct=oct+rem*pow;
+            dec/=8;
+            pow*=10;
+        }
+        System.out.println(oct);
+    }
+}
