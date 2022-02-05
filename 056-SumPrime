@@ -1,0 +1,27 @@
+import java.util.*;
+public class SumPrime {
+    public static boolean isPrime(int n)
+    {
+        int t;
+        for(t=2;t<=n/2;t++)
+        {
+            if(n%t==0) return false;
+        }
+        return true;
+    }
+    public static void main(String[] args)
+    {
+        int i;
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        for(i=2;i<num/2;i++)
+        {
+            if(isPrime(i) && isPrime(num-i))
+            {
+                System.out.println(num + " is a sum of co-primes");
+                return;
+            }
+        }
+        System.out.println(num+" is not a sum of co-primes");
+    }
+}
