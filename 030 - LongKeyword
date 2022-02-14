@@ -1,0 +1,20 @@
+public class LongKeyword {
+    public static void main(String[] args)
+    {
+        int a=1150130736;
+        int b=1939187099;
+        long aLong=1150130736;  //initial assignment of is within the integer minmax limits
+        long bLong=1939187099;
+        System.out.println(Integer.MIN_VALUE); //       -2147483648
+        System.out.println(Integer.MAX_VALUE); //       2147483647
+        System.out.println(Long.MIN_VALUE);    //       -9223372036854775808
+        System.out.println(Long.MAX_VALUE);    //       9223372036854775807
+        System.out.println(a+b);               //       -1205649461
+        System.out.println((long)(a+b));       //       -1205649461
+        System.out.println((long)a+b);         //       3089317835      //b implicitly typecasts to long type
+        System.out.println(10*(aLong+bLong));  //       30893178350     
+        /* working of long is beyond the integer minmax limits 
+         and within limits of long(beyond limits of long we use BigInteger class)
+        */
+    }
+}
