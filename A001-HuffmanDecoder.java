@@ -11,12 +11,10 @@ public class HuffmanDecoder {
             if(s.charAt(i)=='0') {
                 System.out.print((char)(65+count));
                 count=0;
-                continue;
             }
             else if(s.charAt(i)=='1' && count ==3){
                 System.out.print((char)(65+count+1));
                 count=0;
-                continue;
             }
             else count++;
         }
